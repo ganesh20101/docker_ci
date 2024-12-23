@@ -1,11 +1,13 @@
 from flask import Flask
 
+# Initialize the Flask application
 app = Flask(__name__)
 
+# Define a route for the root URL
 @app.route('/')
-def hello_world():
-    return "Hello, World!"
+def hello():
+    return "Hello, cloud-engine labs!!"
 
 if __name__ == '__main__':
-    # Make sure to bind to all interfaces (0.0.0.0) so it's accessible outside the container
+    # Run the app on port 8080, listening on all interfaces (0.0.0.0)
     app.run(host='0.0.0.0', port=8080)
