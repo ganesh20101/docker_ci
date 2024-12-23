@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    image: ganesh20101/hello-cloud-engine-labs:f116a6c53fe2650da0009453a9814f0d0f90b6d3
+    container_name: hello_cloud_engine_app  
+    ports
+      - "8080:8080"  
+    restart: always  
