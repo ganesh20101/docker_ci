@@ -1,27 +1,22 @@
-name: Docker Build and Push
+name: Build and Push Docker Image
 
 on:
   push:
     branches:
-      - main  # Trigger the workflow when pushing to the main branch
+      - main
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Check out the code
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Log in to GitHub Container Registry
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ghcr.io -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      # Step 3: Build the Docker image
       - name: Build Docker Image
-        run: docker build -t ghcr.io/ganesh20101/hello:latest .
+        run: docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/example-app:latest .
 
-      # Step 4: Push the Docker image
       - name: Push Docker Image
-        run: docker push ghcr.io/ganesh20101/hello:latest
+        run: docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/example-app:latest
