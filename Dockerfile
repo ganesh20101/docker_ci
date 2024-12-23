@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the script to the container
 COPY app.py .
 
-# Command to run the Python script
-CMD ["python", "app.py"]
+# Install dependencies (if needed, e.g., Flask)
+# RUN pip install flask
 
+# Command to run the Python script (ensure your app runs on a port, like 8080)
+CMD ["python", "app.py"]
