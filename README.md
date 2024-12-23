@@ -47,7 +47,7 @@ Hello cloud-engine labs!!
 The project files (`app.py` and `Dockerfile`) were committed and pushed to a GitHub repository. The following steps were taken:
 
 1. Initialized the Git repository with `git init`.
-2. Added the files with `git add hello_cloud.py Dockerfile`.
+2. Added the files with `git add app.py Dockerfile`.
 3. Committed the changes with the message: "Add Python script and Dockerfile".
 4. Pushed the code to GitHub.
 
