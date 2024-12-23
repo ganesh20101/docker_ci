@@ -44,7 +44,7 @@ Hello cloud-engine labs!!
 ```
 
 ### Step 5: GitHub Commit and Push
-The project files (`hello_cloud.py` and `Dockerfile`) were committed and pushed to a GitHub repository. The following steps were taken:
+The project files (`app.py` and `Dockerfile`) were committed and pushed to a GitHub repository. The following steps were taken:
 
 1. Initialized the Git repository with `git init`.
 2. Added the files with `git add hello_cloud.py Dockerfile`.
@@ -117,8 +117,8 @@ docker-compose up
 
 1. **Clone the Repository**:
    ```bash
-   git clone <Your_Repo_Link>
-   cd <Your_Repo_Directory>
+   git clone https://github.com/ganesh20101/docker_ci.git
+   cd https://github.com/ganesh20101/docker_ci.git
    ```
 
 2. **Build the Docker Image**:
